@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrostTab — Privacy Policy</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0e0; line-height: 1.7; padding: 40px 20px; }
+        .container { max-width: 680px; margin: 0 auto; }
+        h1 { font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
+        .subtitle { color: #888; font-size: 0.85rem; margin-bottom: 32px; }
+        h2 { font-size: 1.1rem; color: #a5b4fc; margin: 28px 0 10px; }
+        p, li { font-size: 0.92rem; color: #ccc; }
+        ul { padding-left: 20px; margin: 8px 0; }
+        li { margin: 4px 0; }
+        .highlight { background: rgba(99,102,241,0.1); border-left: 3px solid #6366f1; padding: 12px 16px; border-radius: 6px; margin: 16px 0; }
+        a { color: #6366f1; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧊 FrostTab — Privacy Policy</h1>
+        <p class="subtitle">Last updated: March 2, 2026</p>
+
+        <div class="highlight">
+            <strong>TL;DR:</strong> FrostTab does NOT collect, store, or transmit any personal data. Everything stays on your device.
+        </div>
+
+        <h2>What data does FrostTab store?</h2>
+        <p>FrostTab stores your preferences locally on your device using Chrome's built-in storage APIs:</p>
+        <ul>
+            <li>Theme preference (light/dark)</li>
+            <li>Widget layout positions</li>
+            <li>Widget visibility toggles</li>
+            <li>Clock format (12/24hr)</li>
+            <li>Your display name (for the greeting)</li>
+            <li>Weather cities you've added</li>
+            <li>To-do items</li>
+            <li>Favorite shortcuts</li>
+            <li>Custom wallpaper (stored in IndexedDB, on your device)</li>
+        </ul>
+
+        <h2>What data is sent to external servers?</h2>
+        <p>FrostTab makes requests to the following free, public APIs:</p>
+        <ul>
+            <li><strong>Open-Meteo API</strong> (api.open-meteo.com) — to fetch weather data for cities you've added. Only the city name/coordinates are sent. No personal data.</li>
+            <li><strong>GitHub API</strong> (api.github.com) — to fetch public profile stats for the GitHub username you've entered. Only the username is sent. No authentication tokens.</li>
+            <li><strong>Google Favicon Service</strong> — to fetch website icons for your favorite shortcuts. Only the domain name is sent.</li>
+        </ul>
+
+        <h2>What data is NOT collected?</h2>
+        <ul>
+            <li>❌ No browsing history</li>
+            <li>❌ No personal information</li>
+            <li>❌ No analytics or tracking</li>
+            <li>❌ No cookies</li>
+            <li>❌ No data sold to third parties</li>
+            <li>❌ No account registration required</li>
+        </ul>
+
+        <h2>Permissions explained</h2>
+        <ul>
+            <li><strong>storage</strong> — to save your preferences locally</li>
+            <li><strong>search</strong> — to use Chrome's search API for the search bar</li>
+            <li><strong>Host permissions</strong> — to fetch weather data and GitHub stats from public APIs</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>If you have any questions about this privacy policy, you can reach out via the extension's Chrome Web Store listing page.</p>
+    </div>
+</body>
+</html>
