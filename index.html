@@ -1,34 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FrostTab — Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0f0f1a; color: #e0e0e0; line-height: 1.7; padding: 40px 20px; }
-        .container { max-width: 680px; margin: 0 auto; }
-        h1 { font-size: 1.8rem; color: #fff; margin-bottom: 8px; }
-        .subtitle { color: #888; font-size: 0.85rem; margin-bottom: 32px; }
-        h2 { font-size: 1.1rem; color: #a5b4fc; margin: 28px 0 10px; }
-        p, li { font-size: 0.92rem; color: #ccc; }
-        ul { padding-left: 20px; margin: 8px 0; }
-        li { margin: 4px 0; }
-        .highlight { background: rgba(99,102,241,0.1); border-left: 3px solid #6366f1; padding: 12px 16px; border-radius: 6px; margin: 16px 0; }
-        a { color: #6366f1; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: linear-gradient(135deg, #dce0f9 0%, #e8dff5 30%, #f0e6f6 60%, #dce4fa 100%);
+            min-height: 100vh;
+            color: #2d2d3f;
+            line-height: 1.7;
+            padding: 40px 20px;
+        }
+
+        /* Frosted glass container */
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.55);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 36px 32px;
+            box-shadow:
+                0 8px 32px rgba(140, 130, 200, 0.12),
+                0 2px 8px rgba(140, 130, 200, 0.06);
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .header-icon {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #1e1e2f;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            color: #8b8ba3;
+            font-size: 0.78rem;
+            font-weight: 500;
+            margin-top: 4px;
+        }
+
+        /* TL;DR highlight box */
+        .highlight {
+            background: rgba(99, 102, 241, 0.06);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            border-radius: 12px;
+            padding: 14px 18px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .highlight strong {
+            color: #6366f1;
+            font-size: 0.82rem;
+        }
+
+        .highlight span {
+            display: block;
+            font-size: 0.85rem;
+            color: #3d3d56;
+            margin-top: 4px;
+        }
+
+        /* Section */
+        h2 {
+            font-size: 0.92rem;
+            font-weight: 700;
+            color: #6366f1;
+            margin: 26px 0 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        p {
+            font-size: 0.88rem;
+            color: #4a4a65;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            padding-left: 0;
+            margin: 8px 0 12px;
+            list-style: none;
+        }
+
+        li {
+            font-size: 0.86rem;
+            color: #4a4a65;
+            padding: 5px 0 5px 22px;
+            position: relative;
+        }
+
+        li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #a5b4fc;
+        }
+
+        /* No-data list with crosses */
+        .no-list li::before {
+            content: '✕';
+            background: none;
+            color: #ef4444;
+            font-size: 0.7rem;
+            font-weight: 700;
+            top: 6px;
+            left: 2px;
+            width: auto;
+            height: auto;
+        }
+
+        /* Permission cards */
+        .perm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin: 10px 0;
+        }
+
+        .perm-card {
+            background: rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            border-radius: 10px;
+            padding: 10px 12px;
+        }
+
+        .perm-card strong {
+            font-size: 0.75rem;
+            color: #6366f1;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .perm-card span {
+            font-size: 0.76rem;
+            color: #6b6b85;
+        }
+
+        /* Divider */
+        .divider {
+            height: 1px;
+            background: rgba(99, 102, 241, 0.1);
+            margin: 24px 0;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 0.78rem;
+            color: #8b8ba3;
+        }
+
+        .footer a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 18px;
+            }
+
+            .perm-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1>🧊 FrostTab — Privacy Policy</h1>
-        <p class="subtitle">Last updated: March 2, 2026</p>
+        <div class="header">
+            <div class="header-icon">🧊</div>
+            <h1>FrostTab — Privacy Policy</h1>
+            <p class="subtitle">Last updated: March 2, 2026</p>
+        </div>
 
         <div class="highlight">
-            <strong>TL;DR:</strong> FrostTab does NOT collect, store, or transmit any personal data. Everything stays on your device.
+            <strong>TL;DR</strong>
+            <span>FrostTab does NOT collect, store, or transmit any personal data. Everything stays on your
+                device.</span>
         </div>
 
         <h2>What data does FrostTab store?</h2>
-        <p>FrostTab stores your preferences locally on your device using Chrome's built-in storage APIs:</p>
+        <p>All preferences are stored locally on your device using Chrome's built-in storage:</p>
         <ul>
             <li>Theme preference (light/dark)</li>
             <li>Widget layout positions</li>
@@ -38,36 +226,58 @@
             <li>Weather cities you've added</li>
             <li>To-do items</li>
             <li>Favorite shortcuts</li>
-            <li>Custom wallpaper (stored in IndexedDB, on your device)</li>
+            <li>Custom wallpaper (stored locally in IndexedDB)</li>
         </ul>
 
-        <h2>What data is sent to external servers?</h2>
-        <p>FrostTab makes requests to the following free, public APIs:</p>
+        <h2>External API Requests</h2>
+        <p>FrostTab requests data from these free, public APIs:</p>
         <ul>
-            <li><strong>Open-Meteo API</strong> (api.open-meteo.com) — to fetch weather data for cities you've added. Only the city name/coordinates are sent. No personal data.</li>
-            <li><strong>GitHub API</strong> (api.github.com) — to fetch public profile stats for the GitHub username you've entered. Only the username is sent. No authentication tokens.</li>
-            <li><strong>Google Favicon Service</strong> — to fetch website icons for your favorite shortcuts. Only the domain name is sent.</li>
+            <li><strong>Open-Meteo</strong> — weather data for your cities (only coordinates sent)</li>
+            <li><strong>GitHub API</strong> — public profile stats for your username</li>
+            <li><strong>Google Favicon</strong> — website icons for your shortcuts</li>
         </ul>
 
-        <h2>What data is NOT collected?</h2>
-        <ul>
-            <li>❌ No browsing history</li>
-            <li>❌ No personal information</li>
-            <li>❌ No analytics or tracking</li>
-            <li>❌ No cookies</li>
-            <li>❌ No data sold to third parties</li>
-            <li>❌ No account registration required</li>
+        <div class="divider"></div>
+
+        <h2>What we do NOT collect</h2>
+        <ul class="no-list">
+            <li>No browsing history</li>
+            <li>No personal information</li>
+            <li>No analytics or tracking</li>
+            <li>No cookies</li>
+            <li>No data sold to third parties</li>
+            <li>No account registration required</li>
         </ul>
 
-        <h2>Permissions explained</h2>
-        <ul>
-            <li><strong>storage</strong> — to save your preferences locally</li>
-            <li><strong>search</strong> — to use Chrome's search API for the search bar</li>
-            <li><strong>Host permissions</strong> — to fetch weather data and GitHub stats from public APIs</li>
-        </ul>
+        <div class="divider"></div>
 
-        <h2>Contact</h2>
-        <p>If you have any questions about this privacy policy, you can reach out via the extension's Chrome Web Store listing page.</p>
+        <h2>Permissions Explained</h2>
+        <div class="perm-grid">
+            <div class="perm-card">
+                <strong>storage</strong>
+                <span>Save your preferences locally</span>
+            </div>
+            <div class="perm-card">
+                <strong>search</strong>
+                <span>Chrome search API for search bar</span>
+            </div>
+            <div class="perm-card">
+                <strong>open-meteo.com</strong>
+                <span>Fetch weather data</span>
+            </div>
+            <div class="perm-card">
+                <strong>api.github.com</strong>
+                <span>Fetch GitHub profile stats</span>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="footer">
+            <p>Questions? Reach out via the <a href="#">Chrome Web Store listing</a>.</p>
+            <p style="margin-top: 6px;">© 2026 FrostTab. All rights reserved.</p>
+        </div>
     </div>
 </body>
+
 </html>
